@@ -40,6 +40,10 @@
   </div>
 </div>
 <div id="left">
+  <div class="events">Event 1</div>
+  <div class="events">Event 1</div>
+  <div class="events">Event 1</div>
+  <div class="events">Event 1</div>
 </div>    
 
 </body>
