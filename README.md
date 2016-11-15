@@ -3,5 +3,5 @@
 ## QUIZ 
  - Quiz
 ## BugsFunny [Debugging]
- -- Debugging Contest
+ - Debugging Contest
 ## 
