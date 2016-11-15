@@ -41,6 +41,8 @@ canvas {
   border: 0px;
   padding: 5px;
   margin-left: 20%;
+  position: relative;
+  float: left;
   min-height: 400px;
   display: block;
   width: 75%;
@@ -86,7 +88,8 @@ canvas {
   background-color: #fff;
   box-shadow: 0px 1px 5px black;
   transition: .8s;
-  
+  position: relative;
+  float: left;
 }
 .events{
   display: inline-block;
@@ -95,13 +98,15 @@ canvas {
   padding: 10px 10px;
   width: 90%;
   transition: .8s;
+  cursor: pointer;
 }
 .events:hover{
   box-shadow: 0px 2px 10px black;
-  background-color:  #16a085;
+  background-color:  #d02532;
+  border-bottom: 0;
   color: #fff;
 }
-.items:hover{  box-shadow: 1px 3px 6px black; }
+.items:hover{  box-shadow: 1px 3px 6px black; transition: scale(2.0,2.0);}
 
 .btn-red{
   margin-top: 3px;
@@ -111,7 +116,7 @@ canvas {
   padding-bottom: 3px;
   color: #fff;
   border: 0px ; border-radius: 0px;
-  box-shadow: 0px 1px 5px black;
+  box-shadow: 0px 1px 2px black;
   transition: .6s;
   cursor: pointer;
 }
@@ -130,6 +135,7 @@ canvas {
   cursor: pointer;
 }
 .btn-green:hover { background-color: #117a65;  }
+.float-bottom{ position:absolute; bottom: 5px; right: 6px; }
 input {
   margin-bottom: 5px;
 }
@@ -139,7 +145,6 @@ footer{
   opacity: .7;
 }
 @media only screen and (max-width: 700px){
-  canvas{
-    width: 80%;
-  }
+  #d0 { margin-left: 0;  width: 95%; }
+  .items{ transition: 0s; width: 80%; }
 }
