@@ -125,6 +125,23 @@ footer{
   color: white;
   opacity: .7;
 }
+#bug:hover .fa-bug{
+  animation-name: animateIcon;
+  animation-duration:2s; 
+}
+#coding:hover .fa-code{
+  animation-name: animateIcon;
+  animation-duration:2s; 
+}
+#biz:hover .fa-bitbucket-square{
+  animation-name: animateIcon;
+  animation-duration:2s; 
+}
+@keyframes animateIcon{
+  from{color:black;transform: rotate(0deg);}
+  to{color: red;transform: rotate(360deg);}
+}
+
 @media only screen and (max-width: 700px){
   canvas{
     width: 80%;
