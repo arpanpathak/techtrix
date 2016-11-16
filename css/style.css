@@ -5,6 +5,7 @@ body {
   text-align: center;
   padding: 5px;
   background-color: #fff;
+  height: 100%;
 }
 
 header {
@@ -146,4 +147,16 @@ footer{
   canvas{
     width: 80%;
   }
+}
+.flat-button{
+  width:2%;
+  height: 2%;
+  background-color: yellow;
+}
+#sidebar{
+  width: 30%;
+  position: relative;
+  float: left;
+  height: 100%;
+
 }
