@@ -25,17 +25,17 @@
 </header>
 
 <div id="d0">
-  <div class="items">
+  <div class="items" id="coding">
     <h1><i class="fa fa-code" aria-hidden="true"></i> Coding</h1><hr />
   </div>
   
-  <div class="items">
-    <h1><i class="fa fa-bug" aria-hidden="true"></i> BugsFunny</h1><hr />
+  <div class="items" id="bug">
+    <h1><i class="fa fa-bug"   aria-hidden="true"></i> BugsFunny</h1><hr />
     <p style="color:  #3b3c3c;">Bugs are not funny at all! They are frustrating.Debug them if you can</p>
   </div>
 
 
-  <div class="items">
+  <div class="items" id="biz">
     <h1><i class="fa fa-bitbucket-square" aria-hidden="true"></i> BizTech</h1><hr />
   </div>
 </div>
