@@ -149,14 +149,38 @@ footer{
   }
 }
 .flat-button{
-  width:2%;
-  height: 2%;
-  background-color: yellow;
+  width:4vw;
+  height: 4vw;
+  content: " ";
+  background-color: #00ccff;
+  margin:2% 2% 2% 2%;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 4vw;
+  display: inline-block;
+
 }
 #sidebar{
-  width: 30%;
+  width: 23%;
   position: relative;
   float: left;
-  height: 100%;
+  height: 87vh;
+  background-color: #262626;
+  vertical-align: middle;
+  
 
+}
+.question-view{
+  align-content: center;
+  text-align: center;
+  width: 65%;
+  margin-left:25%;
+  height: inherit;
+  margin-top: 6%;
+}
+.option{
+  align-content: center;
+  margin-left: 50%;
+  font-size: 20px;
 }
