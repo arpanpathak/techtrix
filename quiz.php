@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php require_once("classes/bugsfunny.php"); 
+	$obj=new BugsFunny(new Team("1234","psudo_coders","Albert","Dennis","ddasd","zzhj"));
+	$info=$obj->getInfo();
+?>
 <html>
 <head>
 	<title>BUG FUNNY</title>
@@ -21,51 +25,32 @@
 
 	</header>
 	<div id="sidebar">
-		<div id="j1" class="flat-button">1</div>
-		<div id="j2" class="flat-button">2</div>
-		<div id="j3" class="flat-button">3</div>
-		<div id="j4" class="flat-button">4</div>
-		
-		<div id="j5" class="flat-button">5</div>
-		<div id="j6" class="flat-button">6</div>
-		<div id="j7" class="flat-button">7</div>
-		<div id="j8" class="flat-button">8</div>
-		<div id="j9" class="flat-button">9</div>
-		<div id="j10" class="flat-button">10</div>
-		<div id="j11" class="flat-button">11</div>
-		<div id="j12" class="flat-button">12</div>
-		<div id="j13" class="flat-button">13</div>
-		<div id="j14" class="flat-button">14</div>
+		<?php
+			for($i=1;$i<=$info['question_count']; $i++)
+				echo "<div id=j$i class=flat-button data-show=$i>$i</div>";
+		?>
 	</div>
-	<div id="q1" class="question-view" >
-	<span class="ques-no">1)</span>
-	<h3 style="font-family:sans-serif">What are the reason the this question will not run?</h3>
-	<table style=" margin:auto;margin-top:5%;width:inherit">
-		<tr>
-			<td class="option" ><label ><input  type="radio" name="q1">Option 1</label></td>
-			<td class="option"><label><input  type="radio" name="q1">Option 1</label></td>
-		</tr>
-		<tr>
-			<td class="option"><label><input  type="radio" name="q1">Option 1</label></td>
-			<td class="option"><label ><input  type="radio" name="q1">Option 1</label></td>
-		</tr>
-		<tr>
-	</table>
-	</div>
-	<div id="q2" style="display:none" class="question-view" >
-	<span class="ques-no">2)</span>
-	<h3 style="font-family:sans-serif">What library should br included in the code if malloc is used?</h3>
-	<table style=" margin:auto;margin-top:5%;width:inherit">
-		<tr>
-			<td class="option" ><label ><input  type="radio" name="q2">Option 1</label></td>
-			<td class="option"><label><input  type="radio" name="q2">Option 1</label></td>
-		</tr>
-		<tr>
-			<td class="option"><label><input  type="radio" name="q2">Option 1</label></td>
-			<td class="option"><label ><input  type="radio" name="q2">Option 1</label></td>
-		</tr>
-	</table>
-	</div>
+	<?php
+		for($i=1;$i<=$info['question_count']; $i++){
+			$disp=$i==1?"":"display: none;";
+			echo"
+			<div id=q$i class=question-view style='".$disp."'>
+			<span class=ques-no>$i)</span>
+			<h3 style='font-family:sans-serif'>What are the reason the this question will not run?</h3>
+			<table style=' margin:auto;margin-top:5%;width:inherit'>
+				<tr>
+					<td class=option ><label ><input  type=radio name=q$i>Option 1</label></td>
+					<td class=option><label><input  type=radio name=q$i>Option 2</label></td>
+				</tr>
+				<tr>
+					<td class=option><label><input  type=radio name=q$i>Option 3</label></td>
+					<td class=option><label ><input  type=radio name=q$i>Option 4</label></td>
+				</tr>
+				<tr>
+			</table>
+			</div>";
+		}
+	?>
 	<div id="general-button-group">
 		<table>
 			<tr>
@@ -73,8 +58,11 @@
 					<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
 				</td>
 				
-				<td><button type="button" class="flat-btn-move attempt-later-button attempt-later">Attempt Later</button></td>
-				<td><button type="button" class="flat-btn-move reset-button">Reset</button></td>
+				<td><button type="button" class="flat-btn-move attempt-later-button attempt-later"><i class="fa fa-clock-o" aria-hidden="true"></i>Attempt Later</button></td>
+				<td><button type="button" class="flat-btn-move reset-button">
+					<i class="fa fa-undo" aria-hidden="true"></i>
+						Reset</button>
+				</td>
 		
 				<td><button type="button" class="flat-btn-move next">
 					Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
@@ -83,7 +71,8 @@
 		</table>
 	</div>
 	<div class="timer_container">
-		<div class="clock" style="margin:2em 0.95em 2em 0em"></div>
+		<!-- give contest time in data-duration --> 
+		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration="600"></div>
 		<div class="message"></div>
 	</div>
 </body>

@@ -53,6 +53,11 @@ $(function(){
 		$("#j"+currentQuestion).removeClass('attempted').removeClass('not-attempted').addClass('attempt-later');
 
 	});
+	$(".flat-button").on('click',function(){
+		$("#q"+currentQuestion).hide();
+		currentQuestion=$(this).attr('data-show');
+		$("#q"+currentQuestion).show();
+	});
 });
 var clock;
 		
@@ -70,7 +75,7 @@ var clock;
 		        }
 		    });
 			clock.setCountdown(true);
-		    clock.setTime(120);
+		    clock.setTime($('.clock').attr('data-duration')); // get time from data-duration attrib
 		    clock.start();
 
 		});
