@@ -19,10 +19,10 @@ $(function(){
 					$("#j"+currentQuestion).addClass('not-attempted');
 				}
 			}
-			$("#q"+currentQuestion).fadeOut(100, function() {
-				$("#q"+(++currentQuestion)).fadeIn(400);
+			// Issue resolved....
+			$("#q"+currentQuestion).fadeOut(100);
+			$("#q"+(++currentQuestion)).fadeIn(400);
 				$("#j"+currentQuestion).removeClass("attempt-later");
-			});
 		}
 	});
 	$(".prev").click(function(event) {
@@ -37,11 +37,10 @@ $(function(){
 					$("#j"+currentQuestion).addClass('not-attempted');
 				}
 			}
-			$("#q"+currentQuestion).fadeOut(100, function() {
-
-				$("#q"+(--currentQuestion)).fadeIn(400);
+			//Issue resolved..
+			$("#q"+currentQuestion).fadeOut(100);
+			$("#q"+(--currentQuestion)).fadeIn(400);
 				$("#j"+currentQuestion).removeClass("attempt-later");
-			});
 		}
 	});
 	$(".reset-button").click(function(event) {
@@ -58,6 +57,9 @@ $(function(){
 		currentQuestion=$(this).attr('data-show');
 		$("#q"+currentQuestion).show();
 	});
+	$(".flat-button").dblclick(function(e){
+    	e.preventDefault();
+  	});
 });
 var clock;
 		
