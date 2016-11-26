@@ -170,7 +170,13 @@ footer{
 }
 .ques-no { font-size: 38px; text-shadow: 1px 2px 2px black; 
   position: absolute; top: 3px; left: 3px; }
-.timer_container { position: absolute; bottom: 5px; right: 5px; }
+.timer_container { 
+  position: fixed; 
+  bottom: 5px; 
+  left: 6px; 
+  background-color: white;
+  outline:1px solid #262626;
+}
 @keyframes animateIcon{
   from{color:black;transform: rotate(0deg);}
   to{color: red;transform: rotate(360deg);}
@@ -203,7 +209,7 @@ footer{
 /** end of section **/
 #sidebar{
   width: 23%;
-  position: relative;
+  position: fixed;
   float: left;
   height: 87vh;
   background-color: #262626;
@@ -240,5 +246,22 @@ footer{
 }
 .flat-btn-move:hover{
   box-shadow: 2px 2px 2px 2px black;
+}
+#general-button-group{
+  position: relative;
+  padding: 10px 10px;
+  box-shadow: 1px 1px 10px black;
+  align-content: center;
+  text-align: center;
+  width: 65%;
+  margin-left:25%;
+  height: inherit;
+  margin-top: 6%;
+}
+#general-button-group button{
+  margin :10% 15% 10% 22%;
+}
+.reset-button{
+  background-color: aqua;
 }
 /** end of section **/
