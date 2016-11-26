@@ -59,6 +59,28 @@
 		</tr>
 	</table>
 	</div>
+	<div id="q2" style="display:none" class="question-view" >
+	<span class="ques-no">2)</span>
+	<h3 style="font-family:sans-serif">What library should br included in the code if malloc is used?</h3>
+	<table style=" margin:auto;margin-top:5%;width:inherit">
+		<tr>
+			<td class="option" ><label ><input  type="radio" name="q2">Option 1</label></td>
+			<td class="option"><label><input  type="radio" name="q2">Option 1</label></td>
+		</tr>
+		<tr>
+			<td class="option"><label><input  type="radio" name="q2">Option 1</label></td>
+			<td class="option"><label ><input  type="radio" name="q2">Option 1</label></td>
+		</tr>
+		<tr>
+		<td><button type="button" class="flat-btn-move prev">
+			<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
+		</td>
+		<td><button type="button" class="flat-btn-move next">
+			Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+		</td>
+		</tr>
+	</table>
+	</div>
 	<div class="timer_container">
 		<div class="clock" style="margin:2em;"></div>
 		<div class="message"></div>
