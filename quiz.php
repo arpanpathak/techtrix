@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>BUG FUNNY</title>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	!-->
 	<link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">  
       <script type="text/javascript" src="script/jquery.js"></script>
