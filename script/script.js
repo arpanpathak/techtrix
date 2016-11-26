@@ -36,9 +36,8 @@ var clock;
 		        	}
 		        }
 		    });
-				    
-		    clock.setTime(200);
-		    clock.setCountdown(true);
+			clock.setCountdown(true);
+		    clock.setTime(120);
 		    clock.start();
 
 		});
