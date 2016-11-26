@@ -24,6 +24,6 @@ var clock;
 				    
 		    clock.setTime(200);
 		    clock.setCountdown(true);
-		    //clock.start();
+		    clock.start();
 
 		});
