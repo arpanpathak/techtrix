@@ -36,9 +36,8 @@ class BugsFunny extends Contest
 	}
 }
 // Testing ...
-$obj=new BugsFunny(new Team("1234","psudo_coders","Albert","Dennis","ddasd","zzhj"));
+$obj=new BugsFunny(new Team("1234","pseudo_coders","Albert","Dennis","ddasd","zzhj"));
 $arr=$obj->getInfo();
-
 
 foreach ($arr as $key => $value) {
     echo "[ $key ] ----> $value<br />";
