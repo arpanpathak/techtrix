@@ -8,17 +8,50 @@ $(function(){
 	});
 	$(".next").click(function(event) {
 		if(hasItem("#q"+(currentQuestion+1))){
+			if($("input[name=q"+currentQuestion+"]:checked").length){
+				$("#j"+currentQuestion).removeClass('not-attempted');
+				if(!$("#j"+currentQuestion).hasClass('attempt-later'))
+					$("#j"+currentQuestion).addClass('attempted');
+			}
+			else{
+				if(!$("#j"+currentQuestion).hasClass('attempt-later')){
+					$("#j"+currentQuestion).removeClass('attempted');
+					$("#j"+currentQuestion).addClass('not-attempted');
+				}
+			}
 			$("#q"+currentQuestion).fadeOut(100, function() {
 				$("#q"+(++currentQuestion)).fadeIn(400);
+				$("#j"+currentQuestion).removeClass("attempt-later");
 			});
 		}
 	});
 	$(".prev").click(function(event) {
 		if(hasItem("#q"+(currentQuestion-1))){
+			if($("input[name=q"+currentQuestion+"]:checked").length){
+				$("#j"+currentQuestion).removeClass('not-attempted');
+				if(!$("#j"+currentQuestion).hasClass('attempt-later'))
+					$("#j"+currentQuestion).addClass('attempted');
+			}
+			else{
+				if(!$("#j"+currentQuestion).hasClass('attempt-later')){
+					$("#j"+currentQuestion).addClass('not-attempted');
+				}
+			}
 			$("#q"+currentQuestion).fadeOut(100, function() {
+
 				$("#q"+(--currentQuestion)).fadeIn(400);
+				$("#j"+currentQuestion).removeClass("attempt-later");
 			});
 		}
+	});
+	$(".reset-button").click(function(event) {
+		$("input[name=q"+currentQuestion+"]:checked").each(function() {
+			$(this).attr('checked', false);
+		});
+	});
+	$(".attempt-later-button").click(function(event) {
+		$("#j"+currentQuestion).removeClass('attempted').removeClass('not-attempted').addClass('attempt-later');
+
 	});
 });
 var clock;

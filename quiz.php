@@ -21,21 +21,21 @@
 
 	</header>
 	<div id="sidebar">
-		<div class="flat-button">1</div>
-		<div class="flat-button">2</div>
-		<div class="flat-button">3</div>
-		<div class="flat-button">4</div>
+		<div id="j1" class="flat-button">1</div>
+		<div id="j2" class="flat-button">2</div>
+		<div id="j3" class="flat-button">3</div>
+		<div id="j4" class="flat-button">4</div>
 		
-		<div class="flat-button">5</div>
-		<div class="flat-button">6</div>
-		<div class="flat-button">7</div>
-		<div class="flat-button">8</div>
-		<div class="flat-button">9</div>
-		<div class="flat-button">10</div>
-		<div class="flat-button">11</div>
-		<div class="flat-button">12</div>
-		<div class="flat-button">13</div>
-		<div class="flat-button">14</div>
+		<div id="j5" class="flat-button">5</div>
+		<div id="j6" class="flat-button">6</div>
+		<div id="j7" class="flat-button">7</div>
+		<div id="j8" class="flat-button">8</div>
+		<div id="j9" class="flat-button">9</div>
+		<div id="j10" class="flat-button">10</div>
+		<div id="j11" class="flat-button">11</div>
+		<div id="j12" class="flat-button">12</div>
+		<div id="j13" class="flat-button">13</div>
+		<div id="j14" class="flat-button">14</div>
 	</div>
 	<div id="q1" class="question-view" >
 	<span class="ques-no">1)</span>
@@ -50,13 +50,6 @@
 			<td class="option"><label ><input  type="radio" name="q1">Option 1</label></td>
 		</tr>
 		<tr>
-		<td><button type="button" class="flat-btn-move prev">
-			<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
-		</td>
-		<td><button type="button" class="flat-btn-move next">
-			Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
-		</td>
-		</tr>
 	</table>
 	</div>
 	<div id="q2" style="display:none" class="question-view" >
@@ -71,18 +64,26 @@
 			<td class="option"><label><input  type="radio" name="q2">Option 1</label></td>
 			<td class="option"><label ><input  type="radio" name="q2">Option 1</label></td>
 		</tr>
-		<tr>
-		<td><button type="button" class="flat-btn-move prev">
-			<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
-		</td>
-		<td><button type="button" class="flat-btn-move next">
-			Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
-		</td>
-		</tr>
 	</table>
 	</div>
+	<div id="general-button-group">
+		<table>
+			<tr>
+				<td><button type="button" class="flat-btn-move prev">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
+				</td>
+				
+				<td><button type="button" class="flat-btn-move attempt-later-button attempt-later">Attempt Later</button></td>
+				<td><button type="button" class="flat-btn-move reset-button">Reset</button></td>
+		
+				<td><button type="button" class="flat-btn-move next">
+					Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+				</td>
+			</tr>
+		</table>
+	</div>
 	<div class="timer_container">
-		<div class="clock" style="margin:2em;"></div>
+		<div class="clock" style="margin:2em 0.95em 2em 0em"></div>
 		<div class="message"></div>
 	</div>
 </body>
