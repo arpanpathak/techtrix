@@ -1,9 +1,24 @@
+ var currentQuestion=1;
 $(function(){
 	$('#other_events').on('click',function(){
 		$('#left').toggle('fade');
 	});
 	$('#other_events').on('blur',function(){
 		$('#left').slideToggle('fast');
+	});
+	$(".next").click(function(event) {
+		if(hasItem("#q"+(currentQuestion+1))){
+			$("#q"+currentQuestion).fadeOut(100, function() {
+				$("#q"+(++currentQuestion)).fadeIn(400);
+			});
+		}
+	});
+	$(".prev").click(function(event) {
+		if(hasItem("#q"+(currentQuestion-1))){
+			$("#q"+currentQuestion).fadeOut(100, function() {
+				$("#q"+(--currentQuestion)).fadeIn(400);
+			});
+		}
 	});
 });
 var clock;
@@ -26,3 +41,6 @@ var clock;
 		    clock.start();
 
 		});
+function hasItem(item){
+	return $("body").has(item).length;
+}
