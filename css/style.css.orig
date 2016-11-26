@@ -168,12 +168,12 @@ footer{
   animation-name: animateIcon;
   animation-duration:2s; 
 }
-
-
+<<<<<<< HEAD
+=======
 .ques-no { font-size: 38px; text-shadow: 1px 2px 2px black; 
   position: absolute; top: 3px; left: 3px; }
 .timer_container { position: absolute; bottom: 5px; right: 5px; }
-
+>>>>>>> 0b7da85bc0fd8afe773d9d9376df1ca31bd1a124
 @keyframes animateIcon{
   from{color:black;transform: rotate(0deg);}
   to{color: red;transform: rotate(360deg);}
@@ -190,11 +190,11 @@ footer{
   width:4vw;
   height: 4vw;
   content: " ";
-
-
-
+<<<<<<< HEAD
+  background-color: #00ccff;
+=======
   background-color: #fff;
-
+>>>>>>> 0b7da85bc0fd8afe773d9d9376df1ca31bd1a124
   margin:2% 2% 2% 2%;
   border-radius: 5px;
   text-align: center;
@@ -216,17 +216,17 @@ footer{
   background-color: #262626;
   vertical-align: middle;
   
-
+<<<<<<< HEAD
 
 }
-
-
-
+.question-view{
+=======
+}
 .question-view{
   position: relative;
   padding: 10px 10px;
   box-shadow: 1px 1px 10px black;
-
+>>>>>>> 0b7da85bc0fd8afe773d9d9376df1ca31bd1a124
   align-content: center;
   text-align: center;
   width: 65%;
@@ -239,7 +239,7 @@ footer{
   margin-left: 50%;
   font-size: 20px;
 }
-
+<<<<<<< HEAD
 .attempted{
   background-color: green;
 }
@@ -249,6 +249,6 @@ footer{
 .attempt-later{
   background-color: blue;
 }
-
-
+=======
+>>>>>>> 0b7da85bc0fd8afe773d9d9376df1ca31bd1a124
 /** end of section **/
