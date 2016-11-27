@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php require_once("classes/bugsfunny.php"); 
+	require_once("readFile.php");
 	$obj=new BugsFunny(new Team("1234","psudo_coders","Albert","Dennis","ddasd","zzhj"));
 	$info=$obj->getInfo();
 ?>
@@ -12,8 +13,10 @@
 	<link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">  
       <script type="text/javascript" src="script/jquery.js"></script>
+      <link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css">
+      <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
       <script type="text/javascript" src="script/script.js"></script>
-
+      <script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
       <link rel="stylesheet" href="timer/compiled/flipclock.css">
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	  <script src="timer/compiled/flipclock.js"></script>
@@ -37,6 +40,7 @@
 			<div id=q$i class=question-view style='".$disp."'>
 			<span class=ques-no>$i)</span>
 			<h3 style='font-family:sans-serif'>What are the reason the this question will not run?</h3>
+			<textarea  class='code' readonly>".readIt('script/script.js')."</textarea>
 			<table style=' margin:auto;margin-top:5%;width:inherit'>
 				<tr>
 					<td class=option ><label ><input  type=radio name=q$i>Option 1</label></td>
