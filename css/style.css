@@ -259,9 +259,9 @@ footer{
   margin-top: 6%;
 }
 #general-button-group button{
-  margin :10% 15% 10% 22%;
+  margin :10% 5% 5% 22%;
 }
 .reset-button{
-  background-color: #FF5733;
+  background-color: #ff5722;
 }
 /** end of section **/

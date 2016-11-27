@@ -72,7 +72,7 @@
 	</div>
 	<div class="timer_container">
 		<!-- give contest time in data-duration --> 
-		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration="600"></div>
+		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration=<?php echo $info['duration']; ?>></div>
 		<div class="message"></div>
 	</div>
 </body>

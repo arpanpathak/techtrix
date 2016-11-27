@@ -75,7 +75,6 @@ function showQuestion(questionNumber){
 			$("#j"+currentQuestion).removeClass("attempt-later");
 		});
 		
-		
 	}
 
 }
