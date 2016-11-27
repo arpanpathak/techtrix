@@ -7,41 +7,10 @@ $(function(){
 		$('#left').slideToggle('fast');
 	});
 	$(".next").click(function(event) {
-		if(hasItem("#q"+(currentQuestion+1))){
-			if($("input[name=q"+currentQuestion+"]:checked").length){
-				$("#j"+currentQuestion).removeClass('not-attempted');
-				if(!$("#j"+currentQuestion).hasClass('attempt-later'))
-					$("#j"+currentQuestion).addClass('attempted');
-			}
-			else{
-				if(!$("#j"+currentQuestion).hasClass('attempt-later')){
-					$("#j"+currentQuestion).removeClass('attempted');
-					$("#j"+currentQuestion).addClass('not-attempted');
-				}
-			}
-			// Issue resolved....
-			$("#q"+currentQuestion).fadeOut(100);
-			$("#q"+(++currentQuestion)).fadeIn(400);
-				$("#j"+currentQuestion).removeClass("attempt-later");
-		}
+		showQuestion(currentQuestion+1);
 	});
 	$(".prev").click(function(event) {
-		if(hasItem("#q"+(currentQuestion-1))){
-			if($("input[name=q"+currentQuestion+"]:checked").length){
-				$("#j"+currentQuestion).removeClass('not-attempted');
-				if(!$("#j"+currentQuestion).hasClass('attempt-later'))
-					$("#j"+currentQuestion).addClass('attempted');
-			}
-			else{
-				if(!$("#j"+currentQuestion).hasClass('attempt-later')){
-					$("#j"+currentQuestion).addClass('not-attempted');
-				}
-			}
-			//Issue resolved..
-			$("#q"+currentQuestion).fadeOut(100);
-			$("#q"+(--currentQuestion)).fadeIn(400);
-				$("#j"+currentQuestion).removeClass("attempt-later");
-		}
+		showQuestion(currentQuestion-1);
 	});
 	$(".reset-button").click(function(event) {
 		$("input[name=q"+currentQuestion+"]:checked").each(function() {
@@ -53,9 +22,8 @@ $(function(){
 
 	});
 	$(".flat-button").on('click',function(){
-		$("#q"+currentQuestion).hide();
-		currentQuestion=$(this).attr('data-show');
-		$("#q"+currentQuestion).show();
+		
+		showQuestion(parseInt($(this).attr('data-show')));
 	});
 	$(".flat-button").dblclick(function(e){
     	e.preventDefault();
@@ -83,4 +51,31 @@ var clock;
 		});
 function hasItem(item){
 	return $("body").has(item).length;
+}
+function showQuestion(questionNumber){
+	if(questionNumber==currentQuestion)return;
+	console.log(currentQuestion+"-----"+questionNumber);
+	if(hasItem("#q"+(questionNumber))){
+			
+		if($("input[name=q"+currentQuestion+"]:checked").length){
+				$("#j"+currentQuestion).removeClass('not-attempted');
+				if(!$("#j"+currentQuestion).hasClass('attempt-later'))
+					$("#j"+currentQuestion).addClass('attempted');
+		}
+		else{
+			if(!$("#j"+currentQuestion).hasClass('attempt-later')){
+					$("#j"+currentQuestion).removeClass('attempted');
+					$("#j"+currentQuestion).addClass('not-attempted');
+			}
+		}
+			// Issue resolved....
+		$("#q"+currentQuestion).fadeOut(100,function(){
+			currentQuestion=questionNumber;
+			$("#q"+currentQuestion).fadeIn(400);
+			$("#j"+currentQuestion).removeClass("attempt-later");
+		});
+		
+		
+	}
+
 }
