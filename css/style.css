@@ -8,13 +8,13 @@ body {
 }
 
 header {
+  z-index: 999;
   position: fixed;
   width: 100%;
-  height: 12%;
-  z-index: 50;
   font-family:  Papyrus;
   font-stretch: expanded;
-  margin: 0 15px;
+  margin: 15px;
+  margin-top: 0px;
   border: 1px solid lightgray;
   padding: 0px;
   background-color: #d02532;
@@ -211,9 +211,10 @@ footer{
 .flat-button:hover { background-color: #236978; color: #fff; font-size: 35px; }
 /** end of section **/
 #sidebar{
-  margin-top:6%;
+  margin-top: 2%;
   width: 23%;
   position: fixed;
+  top: 60px; 
   float: left;
   height: 87vh;
   background-color: #262626;
