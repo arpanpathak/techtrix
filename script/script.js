@@ -1,5 +1,16 @@
  var currentQuestion=1;
 $(function(){
+	var e=$(".code").each(function(index, el) {
+		console.log(index);
+		$(this).attr('id', 'code'+(index+1));
+		CodeMirror.fromTextArea(document.getElementById("code"+(index+1)),{
+		mode:"javascript",
+		smartIndent:true,
+		readOnly:true,
+		lineNumbers:true
+	});
+	});
+	
 	$('#other_events').on('click',function(){
 		$('#left').toggle('fade');
 	});
