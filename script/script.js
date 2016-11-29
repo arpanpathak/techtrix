@@ -6,6 +6,7 @@ $(function(){
 		CodeMirror.fromTextArea(document.getElementById("code"+(index+1)),{
 		mode:"javascript",
 		smartIndent:true,
+		activeStyleLine:true,
 		readOnly:true,
 		lineNumbers:true
 	});
@@ -84,6 +85,10 @@ function showQuestion(questionNumber){
 			currentQuestion=questionNumber;
 			$("#q"+currentQuestion).fadeIn(400);
 			$("#j"+currentQuestion).removeClass("attempt-later");
+			if($("#q"+currentQuestion).has(".code").length){
+				var editor=$("#"+$("#q"+currentQuestion+" .code").attr("id")+" +.CodeMirror")[0].CodeMirror;
+				editor.refresh();
+			}
 		});
 		
 		

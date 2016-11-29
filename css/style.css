@@ -264,13 +264,13 @@ footer{
   margin-top: 0.5%;
 }
 #general-button-group button{
-  margin :10% 15% 10% 22%;
+  margin :2vh 0vw 2vh 6vw;
 }
 .reset-button{
   background-color: #FF5733;
 }
 .CodeMirror {
-  border: 1px solid red;
+  box-shadow: 1px 2px 1px 2px #626262;
   text-align: left;
 
 }
