@@ -286,11 +286,8 @@ footer{
 }
 /** end of section **/
 @media only screen and (max-width: 900px){
+  .timer_container{ float: left; position: fixed; bottom: 2px; left: 2px; }
   .clock{ zoom: 0.3;
     -moz-transform: scale(0.3); margin: 0% 0% 0% 0%;}
-    header{ position: relative; float: left; }
-  #sidebar{ position: relative; float: left; vertical-align: none; width: 100%; height: auto;}
-  .timer_container { position: relative; float: left; width: 100%; }  
-  #general-button-group button{ width: auto; }
-  .question-view { float: left; }
+  .question-view { position: relative; float: left; margin-top: 100px; }
 }
