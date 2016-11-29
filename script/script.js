@@ -51,7 +51,7 @@ $(function(){
 		 var id="#"+$(this).attr('name');
 		 localStorage[id] = $(this).attr('class');
 	});
-	for(var i=0;i<ques_count;i++)
+	for(var i=1;i<=ques_count;i++)
 	{
 		 var id="#q"+i;
 		 $(id).find("."+localStorage[id]).attr('checked','checked');

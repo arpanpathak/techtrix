@@ -181,10 +181,10 @@ footer{
   position: absolute; top: 3px; left: 3px; }
 .timer_container { 
   position: fixed; 
-  bottom: 5px; 
-  left: 6px; 
-  background-color: white;
-  outline:1px solid #262626;
+  top : -25px; 
+  right: 3px; 
+  background-color: transparent;
+  z-index: 999;
 }
 @keyframes animateIcon{
   from{color:black;transform: rotate(0deg);}
@@ -281,9 +281,8 @@ footer{
   text-align: left;
 
 }
-/** end of section **/
-@media only screen and (max-width: 900px){
- #sidebar{ z-index: 55; position: relative; float: left;}
- header{ position: relative; width: 100%; }
- .question-view{ float: left; }
+.clock{
+  zoom: 0.7;
+    -moz-transform: scale(0.7);
 }
+/** end of section **/

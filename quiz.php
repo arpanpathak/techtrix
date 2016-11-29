@@ -46,7 +46,7 @@
 			<table style=' margin:auto;margin-top:5%;width:inherit'>
 				<tr>
 					<td class=option ><label ><input  type=radio name=q$i class=opt1>Option 1</label></td>
-					<td class=option><label><input  type=radio name=q$i class=opt1>Option 2</label></td>
+					<td class=option><label><input  type=radio name=q$i class=opt2>Option 2</label></td>
 				</tr>
 				<tr>
 					<td class=option><label><input  type=radio name=q$i class=opt3>Option 3</label></td>
