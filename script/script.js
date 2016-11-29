@@ -80,6 +80,7 @@ var clock;
 		    //clock.start();
 		    $('#start').on('click',function(){
 		    	$(this).attr('disabled','disabled');
+		    	$('#finish').removeAttr('disabled');
 				$('#q'+currentQuestion).show();
 				$('#general-button-group').show();
 				$('.flat-btn-group').show();

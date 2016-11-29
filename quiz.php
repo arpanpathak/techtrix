@@ -95,6 +95,7 @@
 	<div class="timer_container">
 		<!-- give contest time in data-duration --> 
 		<button type="button" class="btn-green" id="start">Start </button>
+		<button type="button" class="btn-green" id="finish" disabled="disabled">Finish </button>
 		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration=<?php echo $info['duration']; ?>></div>
 		<div class="message"></div>
 	</div>
