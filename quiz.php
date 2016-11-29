@@ -8,10 +8,8 @@
 <head>
 	<title>BUG FUNNY</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="height=device-height,initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	!-->
+	<script src="css/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">  
       <script type="text/javascript" src="script/jquery.js"></script>
@@ -22,10 +20,8 @@
       <link rel="stylesheet" href="timer/compiled/flipclock.css">
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	  <script src="timer/compiled/flipclock.js"></script>
-	  
+
 	  <!-- icnluding codemirror files !-->
-	   	<script src="codemirror/lib/codemirror.js"></script>
-		<link rel="stylesheet" href="codemirror/lib/codemirror.css">
 		<script src="codemirror/mode/javascript/javascript.js"></script>
 		<link rel="stylesheet" type="text/css" href="codemirror/theme/blackboard.css">
 		<link rel="stylesheet" href="codemirror/theme/3024-day.css">
@@ -117,23 +113,10 @@
 		}
 	?>
 	<div id="general-button-group">
-		<table>
-			<tr>
-				<td><button type="button" class="flat-btn-move prev">
-					<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
-				</td>
-				
-				<td><button type="button" class="flat-btn-move attempt-later-button attempt-later"><i class="fa fa-clock-o" aria-hidden="true"></i>Attempt Later</button></td>
-				<td><button type="button" class="flat-btn-move reset-button">
-					<i class="fa fa-undo" aria-hidden="true"></i>
-						Reset</button>
-				</td>
-		
-				<td><button type="button" class="flat-btn-move next">
-					Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
-				</td>
-			</tr>
-		</table>
+			<button type="button" class="flat-btn-move prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
+			<button type="button" class="flat-btn-move attempt-later-button attempt-later"><i class="fa fa-clock-o" aria-hidden="true"></i> Attempt Later</button>
+			<button type="button" class="flat-btn-move reset-button"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+				<button type="button" class="flat-btn-move next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
 	</div>
 	<div class="timer_container">
 		<!-- give contest time in data-duration --> 
