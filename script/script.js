@@ -1,4 +1,5 @@
  var currentQuestion=1;
+ var ques_count=15;
 $(function(){
 	var e=$(".code").each(function(index, el) {
 		console.log(index);
@@ -30,6 +31,9 @@ $(function(){
 		$("input[name=q"+currentQuestion+"]:checked").each(function() {
 			$(this).attr('checked', false);
 		});
+		// reset option in local storage also...
+		var id='#q'+currentQuestion;
+			localStorage[id] = null;
 	});
 	$(".attempt-later-button").click(function(event) {
 		$("#j"+currentQuestion).removeClass('attempted').removeClass('not-attempted').addClass('attempt-later');
@@ -42,6 +46,16 @@ $(function(){
 	$(".flat-button").dblclick(function(e){
     	e.preventDefault();
   	});
+  	// Adding Local Storage for saving current attempted question options...
+  	$(':radio').on('click',function(){
+		 var id="#"+$(this).attr('name');
+		 localStorage[id] = $(this).attr('class');
+	});
+	for(var i=0;i<ques_count;i++)
+	{
+		 var id="#q"+i;
+		 $(id).find("."+localStorage[id]).attr('checked','checked');
+	}
 });
 var clock;
 		

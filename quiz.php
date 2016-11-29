@@ -7,6 +7,8 @@
 <html>
 <head>
 	<title>BUG FUNNY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="height=device-height,initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	!-->
@@ -43,12 +45,12 @@
 			<textarea  class='code' readonly>".readIt('script/script.js')."</textarea>
 			<table style=' margin:auto;margin-top:5%;width:inherit'>
 				<tr>
-					<td class=option ><label ><input  type=radio name=q$i>Option 1</label></td>
-					<td class=option><label><input  type=radio name=q$i>Option 2</label></td>
+					<td class=option ><label ><input  type=radio name=q$i class=opt1>Option 1</label></td>
+					<td class=option><label><input  type=radio name=q$i class=opt1>Option 2</label></td>
 				</tr>
 				<tr>
-					<td class=option><label><input  type=radio name=q$i>Option 3</label></td>
-					<td class=option><label ><input  type=radio name=q$i>Option 4</label></td>
+					<td class=option><label><input  type=radio name=q$i class=opt3>Option 3</label></td>
+					<td class=option><label ><input  type=radio name=q$i class=opt4>Option 4</label></td>
 				</tr>
 				<tr>
 			</table>
