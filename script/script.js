@@ -79,6 +79,7 @@ var clock;
 		    clock.setTime($('.clock').attr('data-duration')); // get time from data-duration attrib
 		    //clock.start();
 		    $('#start').on('click',function(){
+		    	$('.info').hide();
 		    	$(this).attr('disabled','disabled');
 		    	$('#finish').removeAttr('disabled');
 				$('#q'+currentQuestion).show();

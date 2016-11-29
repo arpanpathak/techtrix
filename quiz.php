@@ -99,6 +99,13 @@
 		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration=<?php echo $info['duration']; ?>></div>
 		<div class="message"></div>
 	</div>
+	<div class="info">
+		<h1>INSTRUCTIONS</h1><hr />
+		<div class="inner">
+			<?php echo readIt("classes/bugsfunny_instructions.html"); ?>
+		</div>
+		<button type="button" class="btn-green" style="float: right;">HIDE</button>
+	</div>
 	<?php
 		for($i=1;$i<=$info['question_count']; $i++){
 			$disp=$i==1?"":"display: none;";

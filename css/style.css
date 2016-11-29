@@ -240,6 +240,19 @@ footer{
   height: inherit;
   margin-top: 6%;
 }
+.info{
+  background-color:  #fbf8f8; 
+  position: relative;
+  padding: 10px 10px;
+  box-shadow: 0px 1px 5px 1px gray;
+  align-content: center;
+  text-align: center;
+  height: 500px;
+  width: 65%;
+  margin-left:25%;
+  margin-top: 6%;
+}
+.inner{ overflow: scroll; background: #fff; margin: 0 auto; height: 300px; width: 99%; box-shadow: 0px 1px 2px gray inset;}
 .option{
   align-content: center;
   margin-left: 50%;
