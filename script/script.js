@@ -68,15 +68,26 @@ var clock;
 		        autoStart: false,
 		        callbacks: {
 		        	stop: function() {
-		        		$('.message').html('The clock has stopped!')
-		        		location.href="http://www.google.com";
+		        		$('.message').html('Time Up...!')
+		        		$('#q'+currentQuestion).hide();
+						$('#general-button-group').hide();
+						$('.flat-btn-group').hide();
 		        	}
 		        }
 		    });
 			clock.setCountdown(true);
 		    clock.setTime($('.clock').attr('data-duration')); // get time from data-duration attrib
-		    clock.start();
-
+		    //clock.start();
+		    $('#start').on('click',function(){
+				$('#q'+currentQuestion).show();
+				$('#general-button-group').show();
+				$('.flat-btn-group').show();
+				if($("#q"+currentQuestion).has(".code").length){
+					var editor=$("#"+$("#q"+currentQuestion+" .code").attr("id")+" +.CodeMirror")[0].CodeMirror;
+					editor.refresh();
+				}
+				clock.start();
+			});
 		});
 function hasItem(item){
 	return $("body").has(item).length;

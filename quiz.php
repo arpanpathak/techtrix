@@ -85,16 +85,24 @@
 
 	</header>
 	<div id="sidebar">
+		<div class="flat-btn-group" style="display: none;">
 		<?php
 			for($i=1;$i<=$info['question_count']; $i++)
 				echo "<div id=j$i class=flat-button data-show=$i>$i</div>";
 		?>
+		</div>
+	</div>
+	<div class="timer_container">
+		<!-- give contest time in data-duration --> 
+		<button type="button" class="btn-green" id="start">Start </button>
+		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration=<?php echo $info['duration']; ?>></div>
+		<div class="message"></div>
 	</div>
 	<?php
 		for($i=1;$i<=$info['question_count']; $i++){
 			$disp=$i==1?"":"display: none;";
 			echo"
-			<div id=q$i class=question-view style='".$disp."'>
+			<div id=q$i class=question-view >
 			<span class=ques-no>$i)</span>
 			<h3 style='font-family:sans-serif'>What are the reason the this question will not run?</h3>
 			<textarea  class='code' readonly>".readIt('code.cpp')."</textarea>
@@ -118,10 +126,6 @@
 			<button type="button" class="flat-btn-move reset-button"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
 				<button type="button" class="flat-btn-move next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
 	</div>
-	<div class="timer_container">
-		<!-- give contest time in data-duration --> 
-		<div class="clock" style="margin:2em 0.95em 2em 0em" data-duration=<?php echo $info['duration']; ?>></div>
-		<div class="message"></div>
-	</div>
+
 </body>
 </html>

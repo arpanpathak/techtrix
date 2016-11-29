@@ -16,7 +16,7 @@ class BugsFunny extends Contest
 		// in order to start the contest ... set isActive to true....
 		//if(!$this->isActive) die("<h2>Contest is not yet started.. Please Wait ..");
 		// duration will be given in seconds..
-		parent::__construct("Bugs Funny",3600,"techtrix","question","users","admin",15,2000);
+		parent::__construct("Bugs Funny",60,"techtrix","question","users","admin",15,2000);
 		$this->team=$team;
 	}
 	function getInfo()
