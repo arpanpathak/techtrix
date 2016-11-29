@@ -8,7 +8,6 @@ $(function(){
 		mode: "text/x-c++src",
 		smartIndent:true,
 		activeStyleLine:true,
-		readOnly:true,
 		lineNumbers:true,
 		matchBrackets: true,
     	styleActiveLine: true,
