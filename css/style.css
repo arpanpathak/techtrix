@@ -273,13 +273,14 @@ footer{
   margin :10% 5% 5% 22%;
 
 }
+#general-button-group button:hover{ box-shadow: 2px 2px 10px 1px black; }
 .reset-button{
   background-color: #ff5722;
 }
 .CodeMirror {
   box-shadow: 1px 2px 1px 2px #626262;
   text-align: left;
-
+  font-size: 15px;
 }
 .clock{
   zoom: 0.7;
