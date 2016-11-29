@@ -270,13 +270,17 @@ footer{
   margin-top: 0.5%;
 }
 #general-button-group button{
+<<<<<<< HEAD
   margin :10% 5% 5% 22%;
+=======
+  margin :2vh 0vw 2vh 6vw;
+>>>>>>> 83ec2bcc836125b189b7d897a99fd78a34c05f3b
 }
 .reset-button{
   background-color: #ff5722;
 }
 .CodeMirror {
-  border: 1px solid red;
+  box-shadow: 1px 2px 1px 2px #626262;
   text-align: left;
 
 }
