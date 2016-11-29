@@ -11,6 +11,12 @@ header {
   z-index: 999;
   position: fixed;
   width: 100%;
+<<<<<<< HEAD
+=======
+  height: 12%;
+  top:0px;
+  z-index: 50;
+>>>>>>> 7291a08f34b2b344d4a16ebe612d5afa4d182288
   font-family:  Papyrus;
   font-stretch: expanded;
   margin: 15px;
@@ -40,7 +46,7 @@ canvas {
 }
 
 #d0 {
-  margin: 15px;
+  margin: 100px;
   border: 0px;
   padding: 5px;
   margin-left: 20%;
@@ -261,7 +267,7 @@ footer{
   width: 65%;
   margin-left:25%;
   height: inherit;
-  margin-top: 6%;
+  margin-top: 0.5%;
 }
 #general-button-group button{
   margin :10% 5% 5% 22%;

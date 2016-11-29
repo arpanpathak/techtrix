@@ -7,8 +7,10 @@ $(function(){
 		mode:"javascript",
 		smartIndent:true,
 		readOnly:true,
-		lineNumbers:true
-	});
+		lineNumbers:true,
+		matchBrackets: true,
+    	styleActiveLine: true
+		});
 	});
 	
 	$('#other_events').on('click',function(){

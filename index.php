@@ -14,7 +14,7 @@
 <body>
   <script src="js/source.js" ></script>
   <script src="js/index.js"></script>
-  <header>
+  <header style="width: 98%; margin-left: 1px;" >
     <span id="other_events"><i class="fa fa-bars" aria-hidden="true"></i></span>
     <h2> <img src="logo.png" style="height: 68px; width: 68px; margin-bottom: -20px;" />
       TECHTRIX Quiz Platform
