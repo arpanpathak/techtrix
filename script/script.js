@@ -5,13 +5,14 @@ $(function(){
 		console.log(index);
 		$(this).attr('id', 'code'+(index+1));
 		CodeMirror.fromTextArea(document.getElementById("code"+(index+1)),{
-		mode:"javascript",
+		mode: "text/x-c++src",
 		smartIndent:true,
 		activeStyleLine:true,
 		readOnly:true,
 		lineNumbers:true,
 		matchBrackets: true,
-    	styleActiveLine: true
+    	styleActiveLine: true,
+    	theme: "midnight"
 		});
 	});
 	
