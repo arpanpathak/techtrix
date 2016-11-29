@@ -144,6 +144,7 @@ canvas {
 .later{ background-color: #4f74fb; float: right;}
 /* end */
 .btn-green{
+  cursor: pointer;
   margin-top: 3px;
   background-color:  #16a085 ;
   padding: 10px 50px; padding-bottom: 10px; padding-right: 50px;
@@ -153,6 +154,8 @@ canvas {
   transition: .6s;
   cursor: pointer;
 }
+.btn-green:disabled{ background-color: lightgray; color: black; }
+.btn-green:disabled:hover{ background-color: lightgray; color: black; }
 .btn-green:hover { background-color: #117a65;  }
 .float-bottom{ position:absolute; bottom: 5px; right: 6px; }
 input {
