@@ -28,7 +28,7 @@ function codejudge($team_id,$user_code_snippet,$main_code_file,$lan,$tle,$input_
 		if(@!unlink($dir_name."/code.out")){
 			return ce." ".file_get_contents($dir_name."/error.txt");
 		}
-		//if($time>$tle) return tle."<b>Execution Time : $time ms";
+		if($time>$tle) return tle."<b>Execution Time : $time ms";
 		return "<b>Execution Time : $time ms<br >".nl2br($output);
 	}
 }
